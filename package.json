@@ -1,0 +1,13 @@
+{
+  "name": "drivhus-plant-card",
+  "version": "1.0.0",
+  "description": "Custom plant card for Home Assistant drivhus sensors",
+  "main": "drivhus-plant-card.js",
+  "keywords": [
+    "home-assistant",
+    "lovelace",
+    "card",
+    "plant",
+    "drivhus"
+  ]
+}
