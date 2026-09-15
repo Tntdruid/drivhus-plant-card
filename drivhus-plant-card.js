@@ -38,9 +38,6 @@ class DrivhusPlantCard extends LitElement {
   }
 
   setConfig(config) {
-    if (!config.moisture || !config.temperature || !config.conductivity) {
-      throw new Error("Du skal angive moisture, temperature og conductivity sensorer.");
-    }
     this.config = config;
   }
 
@@ -67,24 +64,11 @@ class DrivhusPlantCard extends LitElement {
       <ha-card>
         <div class="title">${this.config.name || "Drivhus Plante"}</div>
 
-        <div class="row">
-          <span>Jordfugt</span>
-          <span>${m} %</span>
-        </div>
+        <div class="row"><span>Jordfugt</span><span>${m} %</span></div>
+        <div class="row"><span>Jordtemperatur</span><span>${t} °C</span></div>
+        <div class="row"><span>EC (Næring)</span><span>${c} µS/cm</span></div>
 
-        <div class="row">
-          <span>Jordtemperatur</span>
-          <span>${t} °C</span>
-        </div>
-
-        <div class="row">
-          <span>EC (Næring)</span>
-          <span>${c} µS/cm</span>
-        </div>
-
-        <div class="status" style="background:${color};">
-          ${status}
-        </div>
+        <div class="status" style="background:${color};">${status}</div>
       </ha-card>
     `;
   }
